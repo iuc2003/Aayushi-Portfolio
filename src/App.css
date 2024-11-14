@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Lora', sans-serif;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 0;
 }
@@ -43,7 +44,7 @@ body {
   display: flex;
   gap: 1.5rem;
   list-style: none;
-  margin-right: 1rem; 
+  margin-right: 4rem; 
 }
 
 .nav-links li a {
@@ -52,31 +53,15 @@ body {
   font-size: 1rem;
 }
 
-.social-icons {
-  display: flex;
-  gap: 0.5rem;
-  margin-left: 1rem;
-  padding: 0.2rem; 
-}
-
-.social-icons a {
-  color: #333;
-  font-size: 1.5rem; 
-}
-
-.social-icons a:hover {
-  color: #0077b5;
-}
-
 /* Home Section Styles */
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3rem 2rem;
-  max-width: 1200px;
   margin: 0 auto;
   background-color: #f9f9f9;
+  margin-top: 5rem;
 }
 
 .home-content {
@@ -128,21 +113,6 @@ body {
   color: #0077b5; /* GitHub's neutral color */
 }
 
-/*.hire-me-button {
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-.hire-me-button:hover {
-  background-color: #0056b3;
-}*/
-
 /* Profile Picture Styles */
 .profile-pic-container {
   display: flex;
@@ -183,21 +153,14 @@ body {
   }
 }
 
-.section {
-  height: 100vh; 
-  padding-top: 80px; 
-  transition: filter 0.5s ease; 
-}
-
-.section-blurred {
-  filter: blur(10px); 
-}
-
 #about {
-  max-width: 800px; /* Limits the width of the About section */
-  margin: 0 auto; /* Centers the section horizontally */
-  padding: 2rem; /* Adds some padding for better readability */
-  text-align: center; /* Center-aligns the text */
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 2rem; 
+  text-align: center; 
+  background-color: #f9f9f9;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 #about h2 {

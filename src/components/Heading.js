@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaLinkedin } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 
 const Heading = () => {
@@ -14,9 +13,7 @@ const Heading = () => {
           <li><a href="#contact">Contact</a></li>
 
         </ul>
-        <div className="social-icons">
-          <a href="https://www.linkedin.com/in/aayushi-shah-2353931ab/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-        </div>
+    
       </nav>
     </header>
   );
