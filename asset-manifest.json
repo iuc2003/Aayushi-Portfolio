@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Aayushi-Portfolio/static/css/main.956980d2.css",
+    "main.js": "/Aayushi-Portfolio/static/js/main.0594e3eb.js",
+    "static/js/453.acca0757.chunk.js": "/Aayushi-Portfolio/static/js/453.acca0757.chunk.js",
+    "static/media/profile_picture.heic": "/Aayushi-Portfolio/static/media/profile_picture.7dcc6c01096da32038c7.heic",
+    "static/media/logo.png": "/Aayushi-Portfolio/static/media/logo.40494d18f21600178e00.png",
+    "index.html": "/Aayushi-Portfolio/index.html",
+    "main.956980d2.css.map": "/Aayushi-Portfolio/static/css/main.956980d2.css.map",
+    "main.0594e3eb.js.map": "/Aayushi-Portfolio/static/js/main.0594e3eb.js.map",
+    "453.acca0757.chunk.js.map": "/Aayushi-Portfolio/static/js/453.acca0757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.956980d2.css",
+    "static/js/main.0594e3eb.js"
+  ]
+}
