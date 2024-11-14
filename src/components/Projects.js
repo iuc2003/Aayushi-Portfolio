@@ -24,7 +24,7 @@ const projectData = [
     technologies: 'React.js, CSS, JavaScript',
     overview: 'A personal portfolio website to showcase projects and experiences, built using React.js and deployed on GitHub Pages.',
     contributions: 'Web Development, UI/UX',
-    githubLink: 'https://github.com/yourusername/portfolio-website',
+    githubLink: 'https://github.com/iuc2003/Aayushi-Portfolio',
   },
 ];
 
