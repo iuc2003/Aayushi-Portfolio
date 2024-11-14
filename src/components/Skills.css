@@ -1,0 +1,58 @@
+/* Skills Section Styles */
+.skills {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    margin-top: 7rem;
+  }
+  
+  .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skills p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .skill {
+    background-color: #ffffff;
+    width: 270px; /* Set width for circle */
+    height: 270px; /* Set height for circle */
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 4px solid #eef1f5;
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-icon {
+    color: #5C7C89; /* Icon color */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .skill p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }

@@ -1,0 +1,65 @@
+/* Experience Section Styles */
+.experience {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .experience h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Timeline Styles */
+  .timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: left;
+  }
+  
+  .timeline-dates {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Vertical Line in the Center */
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #5C7C89;
+    top: 0;
+    bottom: 0;
+    left: 20px; /* Position line in the center of the left padding */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 1rem;
+    }
+  
+    .timeline::before {
+      left: 10px; /* Adjust position of the vertical line on smaller screens */
+    }
+  }

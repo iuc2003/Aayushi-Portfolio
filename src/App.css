@@ -1,38 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body {
+  font-family: 'Lora', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5C7C89;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; 
+  height: 70px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 4px solid #1f4959;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin-right: 1rem; 
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  padding: 0.2rem; 
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 1.5rem; 
+}
+
+.social-icons a:hover {
+  color: #0077b5;
+}
+
+/* Home Section Styles */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.intro {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0.2rem 0;
+}
+
+/* Social Links Styling */
+.social-links {
+  display: flex;
+  justify-content: center; /* Center-align the icons */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+
+.social-links a:nth-child(2):hover {
+  color: #0077b5; /* GitHub's neutral color */
+}
+
+/*.hire-me-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.hire-me-button:hover {
+  background-color: #0056b3;
+}*/
+
+/* Profile Picture Styles */
+.profile-pic-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-pic {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 8px solid #1f4959;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .home-content {
+    flex-direction: column;
+    align-items: center;
   }
+
+  .intro h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.section {
+  height: 100vh; 
+  padding-top: 80px; 
+  transition: filter 0.5s ease; 
+}
+
+.section-blurred {
+  filter: blur(10px); 
+}
+
+#about {
+  max-width: 800px; /* Limits the width of the About section */
+  margin: 0 auto; /* Centers the section horizontally */
+  padding: 2rem; /* Adds some padding for better readability */
+  text-align: center; /* Center-aligns the text */
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.6; /* Adjusts line spacing for readability */
+  color: #555;
 }
