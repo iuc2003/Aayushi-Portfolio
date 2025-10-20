@@ -6,8 +6,8 @@
   /* The part that rotates */
   .home .pf-inner {
     position: relative;
-    width: 700px;  /* circle size */
-    height: 700px;
+    width: 500px;  /* circle size */
+    height: 500px;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d; /* Safari */
     transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
