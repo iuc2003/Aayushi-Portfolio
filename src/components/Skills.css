@@ -19,8 +19,13 @@
   
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1cm; 
+    justify-content: center;   /* horizontally center grid items */
+    justify-items: center;     /* center individual skill circles */
+    align-items: center;       /* vertical centering inside grid cells */
+    max-width: 1400px;
+    margin: 0 auto;            /* center the entire grid container */
   }
   
   .skill {

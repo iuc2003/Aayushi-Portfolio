@@ -1,65 +1,152 @@
 /* Experience Section Styles */
 .experience {
-    padding: 2rem 1rem;
-    background-color: #f9f9f9;
-    text-align: center;
-    margin-bottom: 2rem;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.experience h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 800px;                 /* a bit wider to breathe */
+  margin: 0 auto;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #5C7C89;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+}
+.timeline-dot {
+  position: absolute;
+  left: 12px;                       /* centers over the line */
+  top: 1rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #5C7C89;
+  box-shadow: 0 0 0 5px #e7eff3;
+}
+
+/* The card area inside the timeline item now flips */
+.timeline-content {
+  /* base box look (front face uses it) is moved to .flip-front below */
+  background: transparent;
+  box-shadow: none;
+  border-radius: 12px;
+  padding: 0;                       /* flip faces handle padding */
+  outline: none;
+}
+
+/* ===== Flip styles ===== */
+.flip-card {
+  perspective: 1200px;
+  cursor: pointer;
+}
+.flip-inner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  overflow: hidden;
+}
+
+/* FRONT content (your original timeline-content look) */
+.flip-front {
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.flip-front h3 {
+  font-size: 1.15rem;
+  margin: 0 0 .35rem;
+  font-weight: 700;
+}
+.flip-front h4 {
+  margin: 0 0 .2rem;
+  font-weight: 600;
+  color: #2a4a5a;
+}
+.timeline-dates {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.6rem;
+}
+.flip-front p {
+  color: #2a3840;
+  line-height: 1.55;
+  font-size: .95rem;
+}
+
+/* BACK with logo */
+.flip-back {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  transform: rotateY(180deg);
+  background:
+    radial-gradient(600px 220px at 50% 0%, #eef5f8 0%, transparent 60%),
+    #ffffff;
+}
+.company-logo {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.15));
+  transition: transform .3s ease;
+}
+.flip-back:hover .company-logo {
+  transform: scale(1.08);
+}
+.logo-caption {
+  margin-top: .75rem;
+  font-weight: 700;
+  color: #38515d;
+}
+
+/* Hover lift (desktop only) */
+@media (hover: hover) {
+  .flip-card:hover .flip-front,
+  .flip-card:hover .flip-back {
+    box-shadow: 0 18px 36px rgba(0,0,0,.16);
   }
-  
-  .experience h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+  .flip-card:hover .flip-front {
+    transform: translateY(-2px);
   }
-  
-  /* Timeline Styles */
-  .timeline {
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .timeline-content {
-    padding: 1rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    text-align: left;
-  }
-  
-  .timeline-dates {
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Vertical Line in the Center */
-  .timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: #5C7C89;
-    top: 0;
-    bottom: 0;
-    left: 20px; /* Position line in the center of the left padding */
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .timeline {
-      padding-left: 1rem;
-    }
-  
-    .timeline::before {
-      left: 10px; /* Adjust position of the vertical line on smaller screens */
-    }
-  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline { padding-left: 1rem; }
+  .timeline::before { left: 10px; }
+  .timeline-item { padding-left: 2.2rem; }
+  .timeline-dot { left: 2px; }
+  .flip-inner { min-height: 260px; }
+  .flip-front p { font-size: .92rem; }
+}

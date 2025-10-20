@@ -1,0 +1,90 @@
+/* Flip card shell */
+.home .pf-card {
+    perspective: 1200px; /* enables 3D */
+  }
+  
+  /* The part that rotates */
+  .home .pf-inner {
+    position: relative;
+    width: 700px;  /* circle size */
+    height: 700px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Safari */
+    transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
+  }
+  
+  /* Faces must fully overlap and hide their backs */
+  .home .pf-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+    box-shadow: 0 12px 28px rgba(0,0,0,.15);
+    border: 10px solid #eef1f5;
+    background: #5C7C89; /* fallback while image loads */
+  }
+  
+  /* Front and back orientations */
+  .home .pf-front { transform: rotateY(0deg); }
+  .home .pf-back  { transform: rotateY(180deg); }
+  
+  /* Flip state */
+  .home .pf-inner.is-flipped { transform: rotateY(180deg); }
+  
+  /* Image fill */
+  .home .profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Ensure container doesn't impose extra layout */
+  .home .profile-pic-container {
+    display: block;    /* not flex */
+    line-height: 0;    /* remove inline gaps */
+  }
+  
+  /* If you had old circle styles on .profile-pic, neutralize them */
+  .home img.profile-pic {
+    border: 0;
+    border-radius: 0;  /* faces already have the circle radius */
+  }
+  
+  /* Intro text section */
+.home .intro {
+    text-align: center;            
+    color: #1f2a33;
+  }
+  
+  /* Name (h1) styling */
+  .home .intro h1 {
+    font-size: 4rem;           
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2a33;
+  }
+  
+  /* University + Role */
+  .home .intro p {
+    font-size: 2rem;            
+    font-weight: 400;
+    margin: 0.3rem 0;
+    color: #555;
+  }
+  
+  /* Responsive scaling for smaller screens */
+  @media (max-width: 768px) {
+    .home .intro h1 {
+      font-size: 2.4rem;         
+    }
+  
+    .home .intro p {
+      font-size: 1.2rem;
+    }
+
+    .home .pf-inner { width: 280px; height: 280px; }
+  }
+  

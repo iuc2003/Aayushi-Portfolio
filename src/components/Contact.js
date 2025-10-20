@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaLinkedin, FaPhone } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin} from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -17,10 +17,6 @@ const Contact = () => {
           <a href="https://www.linkedin.com/in/aayushi-shah-2353931ab/" target="_blank" rel="noopener noreferrer">
             LinkedIn Profile
           </a>
-        </div>
-        <div className="contact-item">
-          <FaPhone className="contact-icon" />
-          <a href="tel:+780 938 2328">+1 (780) 938-2328</a>
         </div>
       </div>
     </section>

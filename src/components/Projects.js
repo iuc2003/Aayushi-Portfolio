@@ -26,6 +26,22 @@ const projectData = [
     contributions: 'Web Development, UI/UX',
     githubLink: 'https://github.com/iuc2003/Aayushi-Portfolio',
   },
+  {
+    title: 'SCALE by ActionKin',
+    date: 'March 2025',
+    technologies: 'React, Tailwind CSS, Next.js, SQL, Cybera, APIs (Google People, EventBrite, Clerk), GitHub',
+    overview: 'Developed an interactive website and community portal that enables like-minded organizations to collaborate and achieve Sustainable Development Goals (SDGs).',
+    contributions: 'Impact Reporting (interactive charts, data reports), Cybera Deployment, CI/CD GitHub Actions Pipeline, UI/UX Design',
+    githubLink: 'https://github.com/Timi1333/w25project-ActionKin',
+  },
+  {
+    title: 'Job Tracker Application',
+    date: 'April 2025',
+    technologies: 'Django, Python, SQLite/PostgreSQL, HTML, CSS, GitHub',
+    overview: 'Developed a web-based job application organizer to help job seekers track applications, resumes, and employer responses.',
+    contributions: 'Backend Development with Django ORM, Data Management, Authentication, Deployment, and Frontend Integration',
+    githubLink: 'https://github.com/CMPUT-401/job-tracker',
+  },
 ];
 
 const Projects = () => {

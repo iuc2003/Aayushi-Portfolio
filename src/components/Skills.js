@@ -21,12 +21,12 @@ const Skills = () => {
           <div className="skill">
             <FaProjectDiagram className="skill-icon" />
             <h3>Software Development Skills</h3>
-            <p>Object-Oriented Design, Software Testing and Debugging, Algorithm Implementation, Data Structures</p>
+            <p>Object Oriented Design, Software Testing/Debugging, Algorithm Implementation, and Data Structures</p>
           </div>
           <div className="skill">
             <FaTools className="skill-icon" />
             <h3>Software Developer Tools</h3>
-            <p>Android Studio, Visual Studio, GitHub, Azure, AWS</p>
+            <p>Android Studio, Visual Studio, GitHub, OpenShift, BitBucket, Jira, Docker, Apache Airflow, Redis, Azure & AWS</p>
           </div>
         </div>
       </section>
