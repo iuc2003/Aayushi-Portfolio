@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './Experience.css';
 import citiLogo from './logos/citi.png';
 import wcbLogo from './logos/wcb.png';
@@ -39,7 +39,10 @@ const Experience = () => {
 
   const [flippedIndex, setFlippedIndex] = useState(null);
 
-  const toggleFlip = (idx) => setFlippedIndex((cur) => (cur === idx ? null : idx));
+  const toggleFlip = useCallback((idx) => {
+    setFlippedIndex((prev) => (prev === idx ? -1 : idx));
+  }, []);
+
   const onKey = (e, idx) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -55,7 +58,11 @@ const Experience = () => {
         {experiences.map((exp, idx) => {
           const isFlipped = flippedIndex === idx;
           return (
-            <div key={idx} className="timeline-item">
+            <div
+              key={idx}
+              className="timeline-item"
+              style={{ '--i': idx + 1 }} 
+            >
               <div className="timeline-dot" />
 
               {/* Make the timeline content the flip-card */}

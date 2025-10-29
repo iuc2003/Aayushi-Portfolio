@@ -3,34 +3,45 @@ import { FaCode, FaDatabase, FaTools, FaProjectDiagram } from 'react-icons/fa';
 import './Skills.css';
 
 const Skills = () => {
-    return (
-      <section id="skills" className="skills">
-        <h2>Skills</h2>
-        <p>   </p>
-        <div className="skills-grid">
-          <div className="skill">
-            <FaCode className="skill-icon" />
-            <h3>Programming Languages</h3>
-            <p>Python, C/C++, SAS, Java, HTML, JavaScript, MATLAB, and R</p>
-          </div>
-          <div className="skill">
-            <FaDatabase className="skill-icon" />
-            <h3>Cloud & Database Technologies</h3>
-            <p>SQL, MongoDB, Firestore, Git</p>
-          </div>
-          <div className="skill">
-            <FaProjectDiagram className="skill-icon" />
-            <h3>Software Development Skills</h3>
-            <p>Object Oriented Design, Software Testing/Debugging, Algorithm Implementation, and Data Structures</p>
-          </div>
-          <div className="skill">
-            <FaTools className="skill-icon" />
-            <h3>Software Developer Tools</h3>
-            <p>Android Studio, Visual Studio, GitHub, OpenShift, BitBucket, Jira, Docker, Apache Airflow, Redis, Azure & AWS</p>
-          </div>
-        </div>
-      </section>
-    );
-  };
+  const skills = [
+    {
+      icon: <FaCode className="skill-icon" />,
+      title: 'Programming Languages',
+      description: 'Python, C/C++, SAS, Java, HTML, JavaScript, MATLAB, and R',
+    },
+    {
+      icon: <FaDatabase className="skill-icon" />,
+      title: 'Cloud & Database Technologies',
+      description: 'SQL, MongoDB, Firestore, Git',
+    },
+    {
+      icon: <FaProjectDiagram className="skill-icon" />,
+      title: 'Software Development Skills',
+      description: 'Object Oriented Design, Software Testing/Debugging, Algorithm Implementation, and Data Structures',
+    },
+    {
+      icon: <FaTools className="skill-icon" />,
+      title: 'Software Developer Tools',
+      description: 'Android Studio, Visual Studio, GitHub, OpenShift, BitBucket, Jira, Docker, Apache Airflow, Redis, Azure & AWS',
+    },
+  ];
   
-  export default Skills;
+  return (
+    <section id="skills" className="skills">
+      <h2>Skills</h2>
+      <p></p>
+
+      <div className="skills-grid">
+        {skills.map((skill, idx) => (
+          <div className="skill" key={idx} style={{ '--i': idx + 1 }}>
+            {skill.icon}
+            <h3>{skill.title}</h3>
+            <p>{skill.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Skills;

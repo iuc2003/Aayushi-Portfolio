@@ -160,16 +160,16 @@ body {
   text-align: center; 
   background-color: #f9f9f9;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 
 #about h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
 #about p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.6; /* Adjusts line spacing for readability */
   color: #555;
 }

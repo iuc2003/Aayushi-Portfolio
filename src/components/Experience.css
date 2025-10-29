@@ -1,13 +1,14 @@
-/* Experience Section Styles */
 .experience {
+  text-align: center;
   padding: 2rem 1rem;
   background-color: #f9f9f9;
-  text-align: center;
+  margin-top: 6rem;
   margin-bottom: 2rem;
 }
+
 .experience h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 3rem;
+  margin-bottom: 3rem;
 }
 
 /* Timeline Styles */
@@ -16,11 +17,18 @@
   max-width: 800px;                 /* a bit wider to breathe */
   margin: 0 auto;
 }
+
 .timeline-item {
   position: relative;
   padding-left: 3rem;
   margin-bottom: 2rem;
+  width: 80%;
+  opacity: 0; 
+  animation: fadeInLeft 0.6s ease forwards;
+  /* stagger: 0.2s apart, controlled from JSX via style={{ '--i': idx + 1 }} */
+  animation-delay: calc(0.2s * var(--i, 1));
 }
+
 .timeline::before {
   content: '';
   position: absolute;
@@ -30,6 +38,7 @@
   bottom: 0;
   left: 20px;
 }
+
 .timeline-dot {
   position: absolute;
   left: 12px;                       /* centers over the line */
@@ -43,7 +52,6 @@
 
 /* The card area inside the timeline item now flips */
 .timeline-content {
-  /* base box look (front face uses it) is moved to .flip-front below */
   background: transparent;
   box-shadow: none;
   border-radius: 12px;
@@ -56,13 +64,15 @@
   perspective: 1200px;
   cursor: pointer;
 }
+
 .flip-inner {
   position: relative;
   width: 100%;
-  min-height: 220px;
+  min-height: 250px;
   transform-style: preserve-3d;
   transition: transform 0.7s cubic-bezier(.2,.8,.2,1);
 }
+
 .flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
@@ -83,21 +93,25 @@
   padding: 1.25rem 1.5rem;
   transition: box-shadow .25s ease, transform .25s ease;
 }
+
 .flip-front h3 {
   font-size: 1.15rem;
   margin: 0 0 .35rem;
   font-weight: 700;
 }
+
 .flip-front h4 {
   margin: 0 0 .2rem;
   font-weight: 600;
   color: #2a4a5a;
 }
+
 .timeline-dates {
   font-size: 0.9rem;
   color: #888;
   margin-bottom: 0.6rem;
 }
+
 .flip-front p {
   color: #2a3840;
   line-height: 1.55;
@@ -114,6 +128,7 @@
     radial-gradient(600px 220px at 50% 0%, #eef5f8 0%, transparent 60%),
     #ffffff;
 }
+
 .company-logo {
   max-width: 60%;
   max-height: 60%;
@@ -121,9 +136,11 @@
   filter: drop-shadow(0 6px 12px rgba(0,0,0,.15));
   transition: transform .3s ease;
 }
+
 .flip-back:hover .company-logo {
   transform: scale(1.08);
 }
+
 .logo-caption {
   margin-top: .75rem;
   font-weight: 700;
@@ -141,11 +158,32 @@
   }
 }
 
+/* Fade-in from left animation (reused in Projects for consistency) */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .timeline { padding-left: 1rem; }
   .timeline::before { left: 10px; }
-  .timeline-item { padding-left: 2.2rem; }
+  .timeline-item { padding-left: 2.2rem; width: 100%; }
   .timeline-dot { left: 2px; }
   .flip-inner { min-height: 260px; }
   .flip-front p { font-size: .92rem; }

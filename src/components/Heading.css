@@ -1,0 +1,48 @@
+.dropdown { position: relative; }
+
+.dropdown-trigger {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: #333;         /* matches your .nav-links li a color */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.caret { font-size: 0.85em; }
+
+/* Click-open menu (rendered under the trigger) */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;                   /* left-align under “Portfolio”; swap to 50% + translateX(-50%) to center */
+  min-width: 220px;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  padding: 0.5rem 0;
+  z-index: 2000;
+}
+
+/* Reset list styles inside the dropdown only */
+.dropdown-menu,
+.dropdown-menu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 0.9rem;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.dropdown-menu a:hover { background: #f3f4f6; }
