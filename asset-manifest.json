@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/Aayushi-Portfolio/static/css/main.cda1b2c6.css",
-    "main.js": "/Aayushi-Portfolio/static/js/main.5935adcb.js",
+    "main.css": "/Aayushi-Portfolio/static/css/main.56b4ee5a.css",
+    "main.js": "/Aayushi-Portfolio/static/js/main.b3835a0e.js",
     "static/js/453.acca0757.chunk.js": "/Aayushi-Portfolio/static/js/453.acca0757.chunk.js",
     "static/media/profile_picture_3.jpg": "/Aayushi-Portfolio/static/media/profile_picture_3.b22ea424b30a9c06228f.jpg",
     "static/media/profile_picture.heic": "/Aayushi-Portfolio/static/media/profile_picture.7dcc6c01096da32038c7.heic",
     "static/media/profile_picture_2.jpg": "/Aayushi-Portfolio/static/media/profile_picture_2.41a1fea9dec6cb1f57b3.jpg",
     "static/media/puma.png": "/Aayushi-Portfolio/static/media/puma.7022337aa95d1eaeb503.png",
     "static/media/ualberta.png": "/Aayushi-Portfolio/static/media/ualberta.6db1c54b3aa1627bb2e1.png",
+    "static/media/manulife.png": "/Aayushi-Portfolio/static/media/manulife.19cc8bdc95440a7f69b8.png",
     "static/media/citi.png": "/Aayushi-Portfolio/static/media/citi.8c0affbfeeb21a3a9dfb.png",
     "static/media/wcb.png": "/Aayushi-Portfolio/static/media/wcb.830465d205962f2f1b41.png",
     "static/media/logo.png": "/Aayushi-Portfolio/static/media/logo.40494d18f21600178e00.png",
     "index.html": "/Aayushi-Portfolio/index.html",
-    "main.cda1b2c6.css.map": "/Aayushi-Portfolio/static/css/main.cda1b2c6.css.map",
-    "main.5935adcb.js.map": "/Aayushi-Portfolio/static/js/main.5935adcb.js.map",
+    "main.56b4ee5a.css.map": "/Aayushi-Portfolio/static/css/main.56b4ee5a.css.map",
+    "main.b3835a0e.js.map": "/Aayushi-Portfolio/static/js/main.b3835a0e.js.map",
     "453.acca0757.chunk.js.map": "/Aayushi-Portfolio/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cda1b2c6.css",
-    "static/js/main.5935adcb.js"
+    "static/css/main.56b4ee5a.css",
+    "static/js/main.b3835a0e.js"
   ]
 }
