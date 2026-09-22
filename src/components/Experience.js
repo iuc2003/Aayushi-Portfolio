@@ -4,9 +4,17 @@ import citiLogo from './logos/citi.png';
 import wcbLogo from './logos/wcb.png';
 import ualbertaLogo from './logos/ualberta.png';
 import pumaLogo from './logos/puma.png';
+import manuLogo from './logos/manulife.png'
 
 const Experience = () => {
   const experiences = [
+    {
+      title: 'Technical Program Manager- Software Engineering (GRO)',
+      company: 'Manulife/ John Hancock',
+      dates: 'July 2026 - Present',
+      description: 'Launched and led SFG migration across 7+ internal teams, preventing shared-folder access loss with zero production incidents and improving onboarding efficiency by 80%. Also restructured Confluence and launched Rovo/AI-assisted (ARW) tooling, cutting missing-documentation tickets by 30%+ and improving documentation efficiency by ~92%.' ,
+      logo: manuLogo
+    },
     {
       title: 'Software Development Intern',
       company: 'Citi',
