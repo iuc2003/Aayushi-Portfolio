@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import "./styles.css";
 
-/* ===== SETTINGS: edit these ===== */
-const VIDEO_SRC = "/avatar.mp4";   // <- your mp4 file name
-const PHOTO = "";   // optional: a photo for the ID card, e.g. "/me.jpg" (put the file in the public folder)
+const BASE = import.meta.env.BASE_URL;
+const VIDEO_SRC = BASE + "avatar.mp4";   
+const PHOTO = BASE + "me.jpg";   
 const LINKS = {
-  resume: "/Aayushi_Shah_Resume.pdf",                  // put your PDF in the public folder with this name
-  github: "https://github.com/your-username",          // <- replace
-  linkedin: "https://www.linkedin.com/in/your-handle", // <- replace
+  resume: BASE + "Aayushi_Shah_Resume.pdf",                 
+  github: "https://github.com/iuc2003",         
+  linkedin: "https://www.linkedin.com/in/aayushi-shah2003/", 
 };
 const NAV = [
   ["About", "#about"], ["Skills", "#skills"], ["Experience", "#experience"],
@@ -302,7 +302,7 @@ const ROLES = [
     id: "ualberta", org: "University of Alberta", sub: "Alberta Innovates Studentship",
     title: "Undergraduate Summer Student Researcher", type: "Research",
     dates: "May 2023 – Aug 2023", place: "Edmonton, AB", year: "2023",
-    photo: "/photos/ualberta.jpg", caption: "University of Alberta, summer 2023",
+    photo: BASE + "photos/ualberta.jpg", caption: "University of Alberta, summer 2023",
     bullets: [
       "Analyzed data and created predictive models for a lab that studied arsenic transport into red blood cells, using MATLAB and R.",
       "Performed minor web development using HTML and JavaScript, along with fixing bugs for the website.",
@@ -313,7 +313,7 @@ const ROLES = [
     id: "wcb", org: "Workers' Compensation Board (WCB)", sub: "",
     title: "Business Systems Analyst Intern", type: "Internship",
     dates: "May 2024 – Aug 2024", place: "Edmonton, AB", year: "2024",
-    photo: "/photos/wcb.jpg", caption: "WCB, summer 2024",
+    photo: BASE + "photos/wcb.jpg", caption: "WCB, summer 2024",
     bullets: [
       "Modernized reporting infrastructure for WCB's Policy Account Management portal by migrating 25% of legacy SAS reports to SQL and redesigning data workflows with Business Analysts, accelerating query performance and improving reporting-data access for downstream teams.",
     ],
@@ -323,7 +323,7 @@ const ROLES = [
     id: "citi", org: "Citi", sub: "",
     title: "Software Engineer Intern (Product & Platform Engineering)", type: "Internship",
     dates: "May 2025 – Aug 2025", place: "Mississauga, ON", year: "2025",
-    photo: "/photos/citi.jpg", caption: "Citi, summer 2025",
+    photo: BASE + "photos/citi.jpg", caption: "Citi, summer 2025",
     bullets: [
       "Flagged a scalability constraint in Citi's internal Developer Portal and led a cross-functional proof of concept for horizontal scaling; 3X concurrent API capacity, eliminated a single point of failure, and enabled future team onboarding without requiring a full platform rebuild.",
       "Uncovered and closed the authentication-coverage gap across private API endpoints supporting services used by 200M+ customers; partnered with security and engineering to design JWT authentication and role-based access control, increasing protected-endpoint coverage from 98% to 100%.",
@@ -339,7 +339,7 @@ const ROLES = [
     id: "manulife", org: "Manulife", sub: "",
     title: "Associate Full-Stack Engineer, AI Platform Enablement", type: "Full-time",
     dates: "July 2026 – Present", place: "Toronto, ON", year: "2026",
-    photo: "/photos/manulife.jpg", caption: "Manulife, 2026",
+    photo: BASE + "photos/manulife.jpg", caption: "Manulife, 2026",
     bullets: [
       "Identified fragmented file-transfer environments and unused transfers as drivers of technical debt and onboarding delays; led the Secure File Gateway Canada migration across 7+ teams, reducing remediation effort by 68% (22 to 7 hours) and onboarding time by 81% (3 hours to 35 minutes), with zero production incidents.",
       "Analyzed documentation-related support tickets and stakeholder workflows to identify authoring and discoverability gaps; redesigned the Confluence information architecture and launched a Rovo-powered AI authoring workflow, improving documentation efficiency by 92% and reducing missing-documentation tickets by 30%+.",
